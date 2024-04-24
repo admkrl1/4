@@ -16,7 +16,7 @@ Kod bazowy programu Commit4_0:
         Service service = new Service();
         Scanner scanner = new Scanner(System.in);
       while(true){
-        System.out.println("Wybierz opcję: 1. Dodaj studenta");
+        System.out.println("Wybierz opcję: 1. Dodaj studenta, 2. Wypisz listę studentów");
         String k = scanner.nextLine();
 
         switch(k) {
@@ -28,7 +28,12 @@ Kod bazowy programu Commit4_0:
           scanner.nextLine();
         service.addStudent(new Student(imię, wiek));
         break;
-         
+         case"2":
+          var students = service.getStudents();
+        for(Student student : students){
+          System.out.println(student.ToString());
+        }
+        break;
           
       }
 
