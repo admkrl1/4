@@ -7,29 +7,37 @@ Kod bazowy programu Commit4_0:
 • Klasa Student reprezentuje pojedynczego studenta (Imię, Wiek).
 */
 
-import java.io.IOException;
+  import java.io.IOException;
+  import java.util.Scanner;
 
-class Main {
-  public static void main(String[] args) {
+  class Main {
+    public static void main(String[] args) {
+      try {
+        Service service = new Service();
+        Scanner scanner = new Scanner(System.in);
+      while(true){
+        System.out.println("Wybierz opcję: 1. Dodaj studenta");
+        String k = scanner.nextLine();
 
-    System.out.println("Wybierz opcję: 1.dodawanie nowego studenta");
-    int x;
-    switch(x){
-      case 1:
-        
-        
-    }
-    try {
-      Service s = new Service();
-      s.addStudent(new Student("Krzysztof", 20));
-      s.addStudent(new Student("Janusz", 40));
-
-      var students = s.getStudents();
-      for(Student current : students) {
-        System.out.println(current.ToString());
+        switch(k) {
+         case"1":
+          System.out.println("Podaj imię studenta:");
+          String imię = scanner.nextLine();
+          System.out.println("Podaj wiek studenta:");
+          int wiek = scanner.nextInt();
+          scanner.nextLine();
+        service.addStudent(new Student(imię, wiek));
+        break;
+         
+          
       }
-    } catch (IOException e) {
 
+
+      }
+
+      }
+     catch (IOException e) {
+
+      }
     }
-  }
-}
+  } 
