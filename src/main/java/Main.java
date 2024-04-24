@@ -11,6 +11,14 @@ import java.io.IOException;
 
 class Main {
   public static void main(String[] args) {
+
+    System.out.println("Wybierz opcję: 1.dodawanie nowego studenta");
+    int x;
+    switch(x){
+      case 1:
+        
+        
+    }
     try {
       Service s = new Service();
       s.addStudent(new Student("Krzysztof", 20));
