@@ -1,3 +1,9 @@
 Krzysztof 20
 Janusz 40
 adam 21
+ 6 4
+ Adam Golenia 20
+Adam Golenia 20
+Adam Gol 21
+Adam Gol 22
+aadam g 23

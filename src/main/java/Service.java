@@ -8,7 +8,7 @@ import java.io.IOException;
 public class Service {
 
   public void addStudent(Student student) throws IOException {
-    var f = new FileWriter("db.txt", true);
+    var f = new FileWriter("db1.txt", true);
     var b = new BufferedWriter(f);
     b.append(student.ToString());
     b.newLine();
@@ -17,7 +17,7 @@ public class Service {
 
   public Collection<Student> getStudents() throws IOException {
     var ret = new ArrayList<Student>();
-    var f = new FileReader("db.txt");
+    var f = new FileReader("db1.txt");
     var reader = new BufferedReader(f);
     String line = "";
     while (true) {
